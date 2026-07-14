@@ -1,0 +1,103 @@
+.type-container {
+	margin: 0.5rem;
+	margin-bottom: 2rem;
+	display: flex;
+	flex-direction: row;
+	width: 22%;
+	justify-content: center;
+}
+
+.type-button {
+	display: flex;
+	cursor: pointer;
+	font-size: 2rem;
+	border-radius: 1rem;
+	align-items: center;
+	flex-direction: column;
+	transition: transform 0.5s ease-in;
+}
+
+.type-button:hover {
+	transform: scale(1.1);
+}
+
+.type-button-Feu {
+	width: 7rem;
+	height: 7rem;
+}
+
+.type-button-Acier {
+	width: 7rem;
+	height: 7rem;
+}
+.type-button-Combat {
+	width: 7rem;
+	height: 7rem;
+}
+.type-button-Dragon {
+	width: 7rem;
+	height: 7rem;
+}
+.type-button-Eau {
+	width: 7rem;
+	height: 7rem;
+}
+.type-button-Electrik {
+	width: 7rem;
+	height: 7rem;
+}
+.type-button-Glace {
+	width: 7rem;
+	height: 7rem;
+}
+.type-button-Insecte {
+	width: 7rem;
+	height: 7rem;
+}
+.type-button-Normal {
+	width: 7rem;
+	height: 7rem;
+}
+.type-button-Plante {
+	width: 7rem;
+	height: 7rem;
+}
+.type-button-Poison {
+	width: 7rem;
+	height: 7rem;
+}
+.type-button-Psy {
+	width: 7rem;
+	height: 7rem;
+}
+.type-button-Roche {
+	width: 7rem;
+	height: 7rem;
+}
+.type-button-Sol {
+	width: 7rem;
+	height: 7rem;
+}
+.type-button-Spectre {
+	width: 7rem;
+	height: 7rem;
+}
+.type-button-Vol {
+	width: 7rem;
+	height: 7rem;
+}
+
+@media screen and (max-width: 500px) {
+	.type-container {
+		width: 35%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		padding-top: 1rem;
+	}
+
+	.types-pokemon {
+		height: 100%;
+	}
+}

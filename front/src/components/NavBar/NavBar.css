@@ -1,0 +1,460 @@
+#navbar {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	box-shadow: var(--shadow-md);
+	width: 100vw;
+	margin-left: calc(50% - 50vw);
+}
+
+#navbar-container-menu {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	gap: 20px;
+}
+
+.nav-buttonLogin {
+	border: none;
+	border-radius: var(--border-radius-sm);
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 0.8rem 1.2rem;
+	margin: 0.5rem 1.5rem 0 0;
+	transition: var(--transition);
+	cursor: pointer;
+}
+
+.nav-buttonLogin:hover {
+	background: rgba(255, 255, 255, 0.2);
+	transform: translateY(-2px);
+	box-shadow: var(--shadow-sm);
+}
+
+.nav-loginIcon {
+	width: 2rem;
+	height: 2rem;
+	color: white !important;
+	filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.nav-menu {
+	padding: 0.65rem 1.4rem;
+	text-decoration: none;
+	transition: var(--transition);
+	color: white;
+	font-weight: 500;
+	font-size: 0.95rem;
+	border-radius: var(--border-radius-sm);
+	position: relative;
+	font-family: 'Inter', sans-serif;
+	text-transform: none;
+	letter-spacing: 0.2px;
+	background: rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav-menu::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: var(--border-radius-sm);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+	opacity: 0;
+	transition: var(--transition);
+}
+
+.nav-menu:hover {
+	background: rgba(255, 255, 255, 0.18);
+	border-color: rgba(255, 255, 255, 0.25);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-menu:hover::before {
+	opacity: 1;
+}
+
+.nav-menu:active,
+.nav-menu.active {
+	background: rgba(255, 255, 255, 0.25);
+	border-color: rgba(255, 255, 255, 0.35);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu-connexion {
+	font-family: 'Inter', sans-serif !important;
+}
+
+.nav-pokedex {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+#nav-search-responsive {
+	display: none;
+}
+
+#nav-pokedex-typo {
+	padding-left: 1rem;
+	color: white;
+}
+
+#navbar-toolbar {
+	background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+	gap: 20px;
+	padding: 0.8rem 2rem;
+	min-height: 70px;
+}
+
+.nav-search {
+	background-color: rgba(255, 255, 255, 0.95);
+	border-radius: var(--border-radius);
+	padding: 0.6rem 1.2rem;
+	outline: none;
+	border: 2px solid transparent !important;
+	width: 12rem;
+	height: 2.5rem;
+	transition: var(--transition);
+	font-family: 'Inter', sans-serif;
+	font-size: 0.9rem;
+	box-shadow: var(--shadow-sm);
+}
+
+.nav-search:focus {
+	border-color: rgba(255, 255, 255, 0.5) !important;
+	box-shadow: var(--shadow-md);
+	width: 14rem;
+}
+
+.nav-search::placeholder {
+	color: var(--text-light);
+}
+
+.nav-logo {
+	width: 2.2em;
+	height: 2.2em;
+}
+
+.nav-pokedeck-icon {
+	width: 7rem;
+	transition: var(--transition);
+	filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+}
+
+.nav-pokedeck-icon:hover {
+	transform: scale(1.1) translateY(-2px);
+	filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}
+
+#nav-burger {
+	display: none;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	border-radius: var(--border-radius-sm);
+	padding: 0.5rem;
+	transition: var(--transition);
+}
+
+#nav-burger:hover {
+	background: rgba(255, 255, 255, 0.2);
+	transform: scale(1.05);
+}
+
+#nav-search-responsive {
+	display: none;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	border-radius: var(--border-radius-sm);
+	padding: 0.5rem;
+	transition: var(--transition);
+}
+
+#nav-search-responsive:hover {
+	background: rgba(255, 255, 255, 0.2);
+	transform: scale(1.05);
+}
+
+#navbar-container-menu-burger {
+	display: none;
+	background: rgba(255, 255, 255, 0.98);
+	backdrop-filter: blur(20px);
+	border-radius: var(--border-radius);
+	padding: 1.5rem;
+	margin-top: 1rem;
+	box-shadow: var(--shadow-lg);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+#navbar-container-menu-burger .nav-menu {
+	color: var(--text-primary);
+	font-weight: 500;
+}
+
+#navbar-container-menu-burger .nav-menu:hover {
+	background-color: rgba(74, 144, 226, 0.1);
+	color: var(--primary-color);
+}
+
+.navbar-containter-notLogged {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	width: 100%;
+}
+
+.nav-element-right {
+	top: 0;
+	right: 0;
+	position: absolute;
+	margin-right: 8%;
+	padding-top: 0.9rem;
+}
+/* 
+@media (max-width: 500px) {
+	#nav-burger {
+		display: inline;
+		padding: 0.3rem 2rem 0 0;
+		transform: scale(1.5);
+	}
+	#navbar-container-menu {
+		display: none;
+	}
+	.nav-search {
+		display: none !important;
+	}
+	#nav-search-responsive {
+		display: inline-grid;
+		transform: scale(1.6);
+		padding: 0.3rem 0 0 1.5rem;
+	}
+	.nav-element-right {
+		display: none;
+	}
+	#navbar-toolbar {
+		flex-direction: column;
+	}
+	.nav-pokedex {
+		width: fit-content;
+	}
+
+	#navbar-container-menu-burger {
+		display: block;
+	}
+	.nav-element-right {
+		display: none;
+	}
+
+	.nav-element-right.nav-search-visible {
+		display: block !important;
+	}
+} */
+@media (max-width: 500px) {
+	#nav-burger {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 0.5rem;
+	}
+
+	#navbar-container-menu {
+		display: none;
+		width: 100%;
+	}
+
+	#nav-search-responsive {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin-top: 1rem;
+		margin-right: 3.5rem;
+	}
+
+	.nav-element-right {
+		display: none;
+	}
+
+	#navbar-toolbar {
+		flex-direction: column;
+		width: 100%;
+		gap: 1rem;
+		padding: 1rem;
+	}
+
+	.nav-pokedex {
+		width: 100%;
+		justify-content: space-between;
+		padding: 0 1rem;
+	}
+
+	.nav-logo {
+		width: 2rem;
+		height: 2rem;
+	}
+
+	#navbar-container-menu-burger {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0.5rem;
+		width: 100%;
+		margin: 1rem 0 0 0;
+	}
+
+	#navbar-container-menu-burger .nav-menu {
+		width: 100%;
+		text-align: center;
+		color: var(--text-primary);
+		padding: 0.8rem;
+	}
+
+	#navbar-container-menu-burger .nav-menu:hover {
+		background-color: rgba(74, 144, 226, 0.1);
+		color: var(--primary-color);
+	}
+
+	.nav-element-right.nav-search-visible {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		margin: 0.5rem 0;
+		position: relative;
+		margin-right: 0;
+		padding-top: 0;
+	}
+
+	.nav-element-right.nav-search-visible .nav-search {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.nav-burger-icon {
+		fill: white !important;
+	}
+}
+
+@media screen and (min-width: 501px) and (max-width: 1024px) {
+	#navbar-toolbar {
+		flex-direction: column;
+		width: 100%;
+		gap: 1rem;
+		padding: 1rem;
+	}
+
+	#nav-burger {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 0.5rem;
+	}
+
+	#navbar-container-menu {
+		display: none;
+	}
+
+	#nav-search-responsive {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin-top: 1rem;
+		margin-right: 3.5rem;
+	}
+
+	.nav-element-right {
+		display: none;
+	}
+
+	.nav-pokedex {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		padding: 0 1rem;
+	}
+
+	.nav-logo {
+		width: 2rem;
+		height: 2rem;
+	}
+
+	#navbar-container-menu-burger {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0.5rem;
+		width: 100%;
+		margin: 1rem 0 0 0;
+	}
+
+	#navbar-container-menu-burger .nav-menu {
+		width: 100%;
+		text-align: center;
+		color: var(--text-primary);
+		padding: 0.8rem;
+		font-size: 1.1rem;
+	}
+
+	#navbar-container-menu-burger .nav-menu:hover {
+		background-color: rgba(74, 144, 226, 0.1);
+		color: var(--primary-color);
+	}
+
+	.nav-element-right.nav-search-visible {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		margin: 0.5rem 0;
+		position: relative;
+		margin-right: 0;
+		padding-top: 0;
+	}
+
+	.nav-element-right.nav-search-visible .nav-search {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.nav-menu-disconnect-button {
+		font-size: 1.1rem !important;
+	}
+
+	.nav-burger-icon {
+		fill: white !important;
+	}
+
+	.nav-search {
+		width: 100%;
+		padding-left: 1rem;
+		font-size: 1rem;
+	}
+}

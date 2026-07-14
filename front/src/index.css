@@ -1,0 +1,60 @@
+html {
+	scrollbar-gutter: stable;
+	overflow-y: auto;
+}
+
+body {
+	margin: 0;
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: var(--text-primary);
+	line-height: 1.6;
+	overflow-x: hidden;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Amélioration globale des transitions */
+* {
+	transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Scrollbar invisible par défaut, visible au survol */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: transparent;
+	border-radius: 4px;
+	transition: background 0.3s ease;
+}
+
+/* Scrollbar visible uniquement au survol de la page */
+body:hover ::-webkit-scrollbar-thumb {
+	background: var(--primary-color);
+	opacity: 0.5;
+}
+
+body:hover ::-webkit-scrollbar-thumb:hover {
+	background: var(--primary-dark);
+	opacity: 0.8;
+}
+
+/* Pour Firefox - scrollbar invisible par défaut */
+* {
+	scrollbar-width: none;
+}
+
+body:hover * {
+	scrollbar-width: thin;
+	scrollbar-color: var(--primary-color) transparent;
+}

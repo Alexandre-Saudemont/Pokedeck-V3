@@ -1,0 +1,22 @@
+services:
+  db:
+    image: mariadb:10.11
+    container_name: pokedeck-db
+    restart: unless-stopped
+    ports:
+      # 3307 côté hôte car un MySQL local occupe déjà 3306
+      - '3307:3306'
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: pokedeck
+      MARIADB_USER: pokedeck
+      MARIADB_PASSWORD: pokedeck
+    volumes:
+      # Importés automatiquement (ordre alphabétique) au premier démarrage uniquement.
+      # Pour ré-importer : docker compose down -v && docker compose up -d
+      - ./app/data/import_table.sql:/docker-entrypoint-initdb.d/01-import_table.sql:ro
+      - ./app/data/import_data.sql:/docker-entrypoint-initdb.d/02-import_data.sql:ro
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+	/* Palette de couleurs harmonisée */
+	--primary-color: #4A90E2;
+	--primary-dark: #357ABD;
+	--primary-light: #6BA3E8;
+	--secondary-color: #50C878;
+	--accent-color: #FF6B6B;
+	--background-light: #F8F9FA;
+	--background-white: #FFFFFF;
+	--text-primary: #2C3E50;
+	--text-secondary: #5A6C7D;
+	--text-light: #8E9AAF;
+	--border-color: #E1E8ED;
+	--shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+	--shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+	--shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+	--border-radius: 12px;
+	--border-radius-sm: 8px;
+	--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	background-attachment: fixed;
+}
